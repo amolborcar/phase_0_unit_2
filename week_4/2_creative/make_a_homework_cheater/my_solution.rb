@@ -17,16 +17,45 @@
 
 # 3. Initial Solution
 
-def essay(title, topic, thesis, date, pronoun)
-
-    puts title
+class Essay
+   
+    def initialize (topic, date, gender, thesis)
+        @topic = topic
+        @date = date
+        if gender == "male"
+            @pronoun = "he"
+            @possessive = "his"
+        elsif gender == "female"
+            @pronoun = "she"
+            @possessive = "her"
+        elsif gender == "none"
+            @pronoun = "it"
+            @possessive = "its"
+        end
+        @thesis = thesis
+        
+    end
     
-    puts "I've decided to write my essay about " + topic + ".  " + thesis + "This occurred in " + date.to_s +  ".  " + pronoun.capitalize + " had a huge impact on our world and we still see " + topic + "'s legacy carried on today."
-
+    def write_essay
+        puts @topic + " changed the world."
+        puts ""
+        puts "I've decided to write my essay about " + @topic + 
+        ".  " + @topic + " had a huge impact on our society. " +
+        @possessive.capitalize + " greatest achievement was " + @pronoun + " " + @thesis + 
+        ". This occurred in " + @date.to_s +  ". " + 
+        @pronoun.capitalize + " had a huge impact on our world and we still see " + 
+        @possessive + " legacy today."
+        puts ""
+    end
+   
 end
 
-
-essay("Walt Disney is a Great Guy", "Walt Disney", "Walt Disney is one of the forerunnersof modern entertainment.", 1934, "he")
+disney = Essay.new("Walt Disney", 1939, "male", "created modern animation")
+industrialization = Essay.new ("Industrialization", 1800, "none", "revolutionized industry in America")
+steam_engine = Essay.new("The steam engine", 1606, "none", "led the way for all future technologies")
+disney.write_essay
+industrialization.write_essay
+steam_engine.write_essay
 
 # 4. Refactored Solution
 

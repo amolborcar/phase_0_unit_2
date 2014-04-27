@@ -19,17 +19,31 @@ end
 #
 
 # Person 2
-def my_array_modification_method(source, thing_to_modify)
-  # Your code here!
+
+def my_array_modification_method(array,num)
+    
+    for i in 0..array.length
+        if array[i].is_a?(Numeric)
+            array[i] += num
+        end
+        i += 1
+    end
+    
+    return array
+    
 end
 
-def my_hash_modification_method(source, thing_to_modify)
-  # Your code here!
+def my_hash_modification_method(hash, num)
+    hash.each { |key, value| hash[key] += num }
 end
 
 # Identify and describe the ruby method you implemented. 
-# 
-#
+# In the array method, I used the .is_a?(Numeric) method along with a For... loop.
+# The method looks at whatever element it is called on and, in this case, returns true if the
+# element is in the numeric class, which includes integers and floats.  The is_a? method can use any class
+# or object in place of Numeric to test if the element is in that class.
+# In the hash method, I used the .each method.   The .each method iterates on every key/value pair
+# in the hash it is called upon and performs the operations described in the block.
 #
 
 
@@ -67,9 +81,9 @@ end
 # HINT: Use `puts` statements to see if you are altering the original structure with these methods. 
 # Each of these should return `true` if they are implemented properly.
 
-p my_array_finding_method(i_want_pets, "t") == ["want","pets","but"]
-p my_hash_finding_method(my_family_pets_ages, 3) == ["Hoobie", "Ditto"]
-p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but", "I", "only", "have", 3 ]
+#p my_array_finding_method(i_want_pets, "t") == ["want","pets","but"]
+#p my_hash_finding_method(my_family_pets_ages, 3) == ["Hoobie", "Ditto"]
+p my_array_modification_method(i_want_pets, 1) == ["I", "want", 4, "pets", "but", "I", "only", "have", 3]
 p my_hash_modification_method(my_family_pets_ages, 2) == {"Evi" => 8, "Hoobie" => 5, "George" => 14, "Bogart" => 6, "Poly" => 6, "Annabelle" => 2, "Ditto" => 5}
 p my_array_sorting_method(i_want_pets) == ["3", "4", "I", "but", "have", "only", "pets", "want"]
 p my_hash_sorting_method(my_family_pets_ages) == [["Annabelle", 2], ["Ditto", 5], ["Hoobie", 5], ["Bogart", 6], ["Poly", 6], ["Evi", 8], ["George", 14]] 
