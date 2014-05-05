@@ -18,7 +18,7 @@ Git branch shows what branches you currently have in a repository.  By default, 
 #### checkout
 <!-- Your definition here -->
 <!-- 
-Git checkout is how you switch between branches after they ahve been committed.  git checkout (branchname) will make (branchname) the active branch.  
+Git checkout is how you switch between branches after they have been committed.  git checkout (branchname) will make (branchname) the active branch.  
 -->
 
 #### clone
