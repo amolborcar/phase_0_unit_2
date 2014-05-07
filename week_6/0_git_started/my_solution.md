@@ -86,7 +86,18 @@ The git status command gives a current view of the "staging area" as it stands. 
 ## Release 4: Git Workflow
 
 - Push files to a remote repository
+	1. git add the specific file to get it into the "staging area"
+	2. git commit to submit the changes to the repository
+	3. git push to sync up my updated local branch with my repository online
 - Fetch changes
+	1. If I don't already have a copy of the repository, I first do git clone <url> to create a copy of the repository
+	2. git fetch the original repository, in this case from the Devbootcamp github account
+	3. git merge to sync up my copy with the fetched copy of the repository
+	
 - Commit locally
+	1. git add the specific file to get it into the "Staging area"
+	2. git commit to submit the changed files to the local repository.
 
 ## Release 5: Reflection
+
+<!-- I don't really have much to contribute to this reflection, I had already looked up these commands during previous git exercises.  However, I think I'll reference this solution file a few times while trying to really remember how to use git and get used to it. -->
