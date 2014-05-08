@@ -109,6 +109,13 @@ silverware_drawer.view_contents #What should this return?
 removed_fork = silverware_drawer.remove_item(fork) #add some puts statements to help you trace through the code...
 removed_fork.eat
 
+spatula = Silverware.new("spatula")
+silverware_drawer.add_item(spatula)
+silverware_drawer.view_contents
+removed_spatula = silverware_drawer.remove_item(spatula)
+removed_spatula.eat
+removed_spatula.clean_silverware
+
 
 #BONUS SECTION
 # Changed method name to method created earlier
@@ -138,6 +145,8 @@ assert { my_drawer.contents.length == 0 }
 
 # This should run correctly
 assert { my_fork.instance_of? Silverware }
+
+
 
 
 # 5. Reflection 
